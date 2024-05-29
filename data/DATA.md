@@ -7,7 +7,7 @@ The atemporal probe (ATP) is a discriminative model for video-language analysis 
 We examine a number of different standard datasets in the paper for discriminative tasks (e.g. video QA). For consistency with prior work, we leverage standard pipelines from prior work and/or the dataset authors when applicable. Other pipelines may yield slightly differing results (e.g. differences in video decoding, etc.). Details can be found at the following links:
 
 - **MSR-VTT\*, ActivityNet, DiDeMo**: see `scripts/` and `src/` [in this repo here](https://github.com/jayleicn/ClipBERT) for more.
-- **NeXT-QA**: see [the official dataset repo](https://github.com/doc-doc/NExT-QA) for more.
+- **NExT-QA**: see [the official dataset repo](https://github.com/doc-doc/NExT-QA) for more.
 - **VALUE-How2QA**: see [the official dataset repo](https://github.com/VALUE-Leaderboard/DataRelease) for more.
 
 We thank the authors of the repos and the datasets above again. As mentioned in the main README, if you find any of the above excellent resources helpful in your work, please be sure to cite them / their corresponding papers as well.
@@ -42,4 +42,4 @@ You can run the CLIP model as part of the feature processing pipelines mentioned
 
 **Limitations and Broader Impact:** Please refer to the supplement in the project page for a discussion of limitations and broader impacts, as well as the datasheets and model cards in the linked repos above when applicable.
 
-**NeXT-QA (ATP-Hard):** In the paper, we describe a subset of the NeXT-QA validation set identified using ATP for more challenging causal and temporal questions. If you are interested in running experiments on the ATP-Hard (Causal/Temporal) split, please reach out to `shyamal@cs.stanford.edu`.
+**NExT-QA (ATP-Hard):** In the paper, we describe a subset of the NExT-QA validation set identified using ATP for more challenging causal and temporal questions. You can find the ATP-Hard split for the causal/temporal set in NExT-QA at [this link](https://stanfordvl.github.io/atp-revisit-video-lang//assets/atp-hard-ct4.txt). These are the row indices corresponding to validation set annotations in the [NExT-QA release](https://github.com/doc-doc/NExT-QA/blob/main/dataset/nextqa/val.csv) (0-indexed; i.e., "0" is the first entry after the header row in the NExT-QA validation csv file, "4995" is the last) -- please use the question `type` metadata in the official val annotations file to sub-categorize for split-specific (e.g., Acc-C, Acc-T) metrics. For additional questions, please reach out to `shyamal@cs.stanford.edu`.
